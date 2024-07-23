@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(110, 107, 107);
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #1d04aa;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 200px;
+}
+.recent-payments {
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 0 25px 25px 228px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    width: 50% !important;
+}
+
+.new-students {
+    flex: 2;
+    background: white;
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+.new-students table td:nth-child(1) img {
+    height: 40px;
+    width: 40px;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+    
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+    
+<div class="sidebar">
+    <h2 class="" href=""><b>LOGO</h2>
+  <a class="active" href="#home"><i class="fa fa-id-card-o" aria-hidden="true"></i> Dashboard</a>
+  <a href="#news"><i class="fa fa-envelope-open" aria-hidden="true"></i> Oppertunities</a>
+  <a href="#contact"><i class="fa fa-microchip" aria-hidden="true"></i> Suppliers</a>
+  <a href="#about"><i class="fa fa-address-card-o" aria-hidden="true"></i> Buyers</a>
+  <a href="#about"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact</a>
+  <a href="#about"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Watchlists</a>
+</div>
+
+<div class="content" style="background-color: blue;">
+  <!-- <h2>Responsive Sidebar Example</h2>
+  <p>This example use media queries to transform the sidebar to a top navigation bar when the screen size is 700px or less.</p>
+  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+  <h3>Resize the browser window to see the effect.</h3> -->
+</div>
+<div style="display: flex; justify-content: center;align-items: center;">
+    <div class="content-2">
+        <div class="recent-payments" style="margin-top: -100px;">
+            <div class="title" >
+                
+                <div>
+                    <img src="Admin-Profile-PNG-Clipart.png" style="width: 150px;" alt="">
+                    <h3 style="text-align: center;">name</h3>
+                    <h5 style="text-align: center;">name</h5>
+                </div>
+                
+            </div>
+           <div style="display: flex;justify-content: center;align-items: center;gap: 10px;">
+            <div><h5>Oppertunities Applied</h5></div>
+            <div><h5 style="color: orangered;">32</h5></div>
+           </div>
+           <div style="display: flex;justify-content: center;align-items: center;gap: 10px;">
+            <div><h5>Oppertunities Won</h5></div>
+            <div><h5 style="color: green;">32</h5></div>
+           </div>
+           <div style="display: flex;justify-content: center;align-items: center;gap: 10px;">
+            <div><h5>Current Oppertunities</h5></div>
+            <div><h5 style="color: gray;">32</h5></div>
+           </div>
+        </div>
+        
+    </div>
+    <div style="margin-top: -100px;">
+        <div class="new-students">
+            <div class="title">
+                <div style="display: flex;justify-content: center;align-items: center;gap: 90px;">
+                <div><h5>Account Setting</h5></div>
+                <div><h5>Company Setting</h5></div>
+                <div><h5>Documents</h5></div>
+                <div><h5>Billing</h5></div>
+                <div><h5>Notification</h5></div>
+                </div>
+            </div>
+           <div style="padding: 20px 20px 20px 20px;">
+            <form action="">
+                <div style="display: flex;justify-content: center;gap: 20px;">
+                    <div>
+                    <label for="">First Name</label><br>
+                    <input type="text" style="width: 400px;height: 40px;">
+                    </div>
+                    <div>
+                        <label for="">Last Name</label><br>
+                    <input type="text" style="width:400px;height: 40px;">
+                    </div>
+                </div>
+                <div style="display: flex;justify-content: center;gap: 20px; padding-top: 30px;">
+                    <div>
+                    <label for="">Phone Number</label><br>
+                    <input type="number" style="width: 400px;height: 40px;">
+                    </div>
+                    <div>
+                        <label for="">Email Address</label><br>
+                    <input type="email" style="width:400px;height: 40px;">
+                    </div>
+                </div>
+                <div style="display: flex;justify-content: center;gap: 20px; padding-top: 30px;">
+                    <div>
+                    <label for="">City</label><br>
+                    <input type="text" style="width: 400px;height: 40px;">
+                    </div>
+                    <div>
+                        <label for="">State/Country</label><br>
+                    <input type="text" style="width:400px;height: 40px;">
+                    
+                    </div>
+                </div>
+                <div style="display: flex;justify-content: center;gap: 20px; padding-top: 30px;">
+                    <div>
+                    <label for="">PostCode</label><br>
+                    <input type="number" style="width: 400px;height: 40px;">
+                    </div>
+                    <div>
+                        <label for="">Country/Country</label><br>
+                    <input type="text" style="width:400px;height: 40px;">
+                    
+                    </div>
+                </div>
+            </form>
+           </div>
+        </div>
+    </div>
+    
+</div>
+
+<div>
+
+</div>
+
+</body>
+</html>
